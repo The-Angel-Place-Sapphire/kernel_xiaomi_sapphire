@@ -19,3 +19,10 @@ sh_binary_host {
     src: ":gen-headers_install.sh",
     required: ["unifdef"],
 }
+
+cc_library_headers {
+    name: "qti_display_kernel_headers",
+    vendor: true,
+    recovery_available: true,
+    export_include_dirs: ["include/uapi"],
+}
